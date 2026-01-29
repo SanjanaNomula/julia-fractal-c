@@ -65,7 +65,8 @@ int main(int argc, char *argv[]) {
   int W = 1200;
   int H = 600;
 
-  omp_set_num_threads(1);
+  omp_set_num_threads(4);
+  
   
   // Create a window to display the image.
   Tigr *screen = tigrWindow(W, H, "Julia Fractal", 0);
