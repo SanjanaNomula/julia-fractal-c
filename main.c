@@ -65,7 +65,6 @@ int main(int argc, char *argv[]) {
   int W = 1200;
   int H = 600;
 
-  // Set number of OpenMP threads
   omp_set_num_threads(1);
   
   // Create a window to display the image.
