@@ -19,11 +19,9 @@ $ bash build.sh
 
 <br>
 
-## Task
+Parallelization and Performance
+The rendering logic is designed to be suitable for parallel execution using OpenMP, as pixel computations are independent. Performance can be evaluated by comparing execution times of sequential and parallel implementations, and speedup can be measured accordingly.
 
-The current code provides a **sequential** implementation of Julia fractal rendering. Your task is to parallelize the rendering using OpenMP. Measure and report the speedup achieved by the parallel implementation compared to the sequential one.
-
-We will use a **leaderboard** to track the best speedups across all submissions.
 
 <br>
 
