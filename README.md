@@ -19,7 +19,7 @@ $ bash build.sh
 
 <br>
 
-##Parallelization and Performance
+## Parallelization and Performance
 
 The rendering logic is designed to be suitable for parallel execution using OpenMP, as pixel computations are independent. Performance can be evaluated by comparing execution times of sequential and parallel implementations, and speedup can be measured accordingly.
 
