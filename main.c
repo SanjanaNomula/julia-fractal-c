@@ -44,6 +44,7 @@ void renderJuliaFractal(Tigr *image, double xmin, double xmax, double ymin, doub
   int H = image->h;
   double xf = (xmax - xmin) / (double) W;
   double yf = (ymax - ymin) / (double) H;
+  #pragma omp parallel for
   for (int y=0; y < H; ++y) {
     for (int x=0; x < W; ++x) {
       // Map pixel coordinate to complex number.
@@ -63,6 +64,10 @@ void renderJuliaFractal(Tigr *image, double xmin, double xmax, double ymin, doub
 int main(int argc, char *argv[]) {
   int W = 1200;
   int H = 600;
+
+  // Set number of OpenMP threads
+  omp_set_num_threads(1);
+  
   // Create a window to display the image.
   Tigr *screen = tigrWindow(W, H, "Julia Fractal", 0);
   Tigr *image  = tigrBitmap(W, H);
